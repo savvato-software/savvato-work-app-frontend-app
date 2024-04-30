@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import './App.css';
+import logo from './logo.svg';
 
+// NewPage component
+
+function NewPage() {
+  return (
+    <div>
+      <h2>New Page</h2>
+      <p>This is a new page.</p>
+        <Link to="/" className="App-link">Go to Home</Link>
+    </div>
+  );
+}
+
+function Home() {
+    return (
+        <div>
+        <h2>Home</h2>
+        <p>Welcome to the home page.</p>
+            <Link to="/new-page" className="App-link">Go to New Page</Link>
+        </div>
+    );
+}
+
+// App component
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />  {/* Add this if you want a default landing page */}
+          <Route path="/new-page" element={<NewPage />} />
+        </Routes>
+    </Router>
   );
 }
 
