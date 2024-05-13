@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import './App.css';
 import logo from './logo.svg';
+import LoginPage from './LoginPage';
 
 // NewPage component
 
@@ -32,6 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />  {/* Add this if you want a default landing page */}
           <Route path="/new-page" element={<NewPage />} />
+          <Route path="/login-page" element={<LoginPage />} />
         </Routes>
     </Router>
   );
