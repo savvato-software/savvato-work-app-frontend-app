@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import './App.css';
 import logo from './logo.svg';
-import LoginPage from './LoginPage';
+import LoginPage from './pages/login-page/LoginPage';
 
 // NewPage component
 
