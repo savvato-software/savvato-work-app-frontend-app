@@ -1,6 +1,6 @@
 import React from 'react';
 import { render as rtlRender, screen, fireEvent, waitFor, act } from '@testing-library/react';
-import '@testing-library/jest-dom'; // This is fine to keep for custom matchers
+import '@testing-library/jest-dom'; 
 import LoginPage from '../pages/login-page/LoginPage';
 
 beforeEach(() => {
@@ -75,7 +75,6 @@ test('handles successful login', async () => {
   expect(requestBody).toEqual({ username: 'testUser', password: 'testPass' });
 
   const token = sessionStorage.getItem('jwtToken');
-  console.log('Retrieved token:', token);  // Debug log
   expect(token).toBe('Bearer mock-token');
 });
 
