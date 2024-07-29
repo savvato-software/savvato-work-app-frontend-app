@@ -8,9 +8,6 @@ function LoginPage() {
 
     const handleLogin = async () => {
 
-        console.log('Username:', username);
-        console.log('Password:', password);
-
         try {
             const response = await fetch('/public/login', {
                 method: 'POST',
